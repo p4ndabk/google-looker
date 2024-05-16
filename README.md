@@ -6,4 +6,4 @@ Este é o repositório do front-end do projeto.
 
 Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 
-Execute o seguinte comando para instalar as dependências:
+Execute o seguinte comando para instalar as dependências
