@@ -8,48 +8,48 @@ function LineChart({ className, cardInfos, color, style }) {
   const { id } = cardInfos || {};
 
   //*--- data from Backend ---*
-  // const { isLoaded, data, fields, title } = useQuery({ id });
+  const { isLoaded, data, fields, title } = useQuery({ id });
 
-  // if (!isLoaded) {
-  //   return (
-  //     <div>
-  //       <Skeleton className="w-[80%] h-3 opacity-30" />
-  //       <div className="flex items-center justify-center" style={style}>
-  //         <TailSpin height="40" width="40" color="#1c233b" radius="1" />
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (!isLoaded) {
+    return (
+      <div>
+        <Skeleton className="w-[80%] h-3 opacity-30" />
+        <div className="flex items-center justify-center" style={style}>
+          <TailSpin height="40" width="40" color="#1c233b" radius="1" />
+        </div>
+      </div>
+    );
+  }
 
-  // const { dimensions, measures } = fields;
+  const { dimensions, measures } = fields;
 
-  // const xAxisData = data.map((item) => item[dimensions[0].name].value);
+  const xAxisData = data.map((item) => item[dimensions[0].name].value);
 
-  // const serieData = data.map((item, index) => {
-  //   return {
-  //     value: item[measures[0].name].value,
-  //     label: item[measures[0].name].rendered,
-  //     ...((index === 0 || index === data.length - 1) && {
-  //       symbolSize: "8",
-  //       symbol: "circle",
-  //     }),
-  //   };
-  // });
+  const serieData = data.map((item, index) => {
+    return {
+      value: item[measures[0].name].value,
+      label: item[measures[0].name].rendered,
+      ...((index === 0 || index === data.length - 1) && {
+        symbolSize: "8",
+        symbol: "circle",
+      }),
+    };
+  });
    //*--- end of data from Backend ---*
 
   //*--- Static Content ---*
-  const title = "Gas - Change in energy consumption";
-  const xAxisData = ["1990", "1995", "2000", "2005", "2010", "2015", "2020"];
-  const measures = [{ label: "Gas", name: "Gas" }];
-  const serieData = [
-    { value: 0, symbolSize: 8 },
-    { value: 5 },
-    { value: 20 },
-    { value: 25 },
-    { value: 50 },
-    { value: 75 },
-    { value: 150, symbolSize: 8 },
-  ];
+  // const title = "Gas - Change in energy consumption";
+  // const xAxisData = ["1990", "1995", "2000", "2005", "2010", "2015", "2020"];
+  // const measures = [{ label: "Gas", name: "Gas" }];
+  // const serieData = [
+  //   { value: 0, symbolSize: 8 },
+  //   { value: 5 },
+  //   { value: 20 },
+  //   { value: 25 },
+  //   { value: 50 },
+  //   { value: 75 },
+  //   { value: 150, symbolSize: 8 },
+  // ];
   //*--- Static Content ---*
 
   const hexToRgba = (hex, opacity) => {

@@ -9,55 +9,55 @@ import { motion } from "framer-motion";
 function RadarChart({ id, style }) {
 
   //*--- data from Backend ---*
-  // const { isLoaded, data, fields, title } = useQuery({ id });
+  const { isLoaded, data, fields, title } = useQuery({ id });
 
-  // if (!isLoaded) {
-  //   return (
-  //     <div className="flex flex-col gap-4">
-  //       <Skeleton className="w-3/4 h-3 mt-2" />
-  //       <div className="flex items-center justify-center" style={style}>
-  //         <TailSpin height="40" width="40" color="white" radius="1" />
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (!isLoaded) {
+    return (
+      <div className="flex flex-col gap-4">
+        <Skeleton className="w-3/4 h-3 mt-2" />
+        <div className="flex items-center justify-center" style={style}>
+          <TailSpin height="40" width="40" color="white" radius="1" />
+        </div>
+      </div>
+    );
+  }
 
-  // const serieData = {
-  //   name: "Energy Comsuption",
-  //   value: Object.keys(data[0]).map((item) => {
-  //     return data[0][item].value;
-  //   }),
-  // };
+  const serieData = {
+    name: "Energy Comsuption",
+    value: Object.keys(data[0]).map((item) => {
+      return data[0][item].value;
+    }),
+  };
 
-  // const max = serieData.value.reduce(
-  //   (accumulator, value) => Math.max(accumulator, value),
-  //   0
-  // );
+  const max = serieData.value.reduce(
+    (accumulator, value) => Math.max(accumulator, value),
+    0
+  );
 
-  // const indicator = Object.keys(data[0]).map((item, index) => {
-  //   return {
-  //     name: fields.measures[index].label,
-  //     max,
-  //   };
-  // });
+  const indicator = Object.keys(data[0]).map((item, index) => {
+    return {
+      name: fields.measures[index].label,
+      max,
+    };
+  });
   //*--- end of data from Backend ---*
 
   //*--- Static Content ---*
-  const title = "Energy consumption, 1990 vs 2021";
-  const indicator = [
-    { name: "Oil", max: 6500 },
-    { name: "Solar", max: 16000 },
-    { name: "Wind", max: 30000 },
-    { name: "Nuclear", max: 38000 },
-    { name: "Hydropower", max: 52000 },
-    { name: "Gas", max: 25000 },
-    { name: "Coal", max: 25000 },
-  ];
+  // const title = "Energy consumption, 1990 vs 2021";
+  // const indicator = [
+  //   { name: "Oil", max: 6500 },
+  //   { name: "Solar", max: 16000 },
+  //   { name: "Wind", max: 30000 },
+  //   { name: "Nuclear", max: 38000 },
+  //   { name: "Hydropower", max: 52000 },
+  //   { name: "Gas", max: 25000 },
+  //   { name: "Coal", max: 25000 },
+  // ];
 
-  const serieData = {
-    value: [4200, 3000, 20000, 35000, 50000, 18000],
-    name: "2021",
-  };
+  // const serieData = {
+  //   value: [4200, 3000, 20000, 35000, 50000, 18000],
+  //   name: "2021",
+  // };
   //*--- end of Static Content ---*
 
   const serieName = "Energy Comsuption";
