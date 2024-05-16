@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: energyDashboard
+      POSTGRES_USER: cluster
+      POSTGRES_PASSWORD: clusterWorkshop
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/sql:/docker-entrypoint-initdb.d
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    working_dir: /src
+    volumes:
+      - ./:/src
+      - /src/node_modules
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://cluster:clusterWorkshop@postgres:5432/energyDashboard
+    depends_on:
+      - postgres
+      
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./scripts/nginx:/etc/nginx/conf.d
+    depends_on:
+      - backend
+volumes:
+  postgres_data:
