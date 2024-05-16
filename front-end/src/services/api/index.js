@@ -25,7 +25,7 @@ const createAxiosInstance = () => {
     (error) => {
       if (error.response && error.response.status === 401) {
         removeStorage();
-        // window.location.href = "/login";
+        window.location.href = "/login";
       }
       return Promise.reject(error);
     }

@@ -28,12 +28,12 @@ function App() {
   return (
     <DashboardProvider>
       <BrowserRouter>
-        {/* <AuthenticationProvider> */}
+        <AuthenticationProvider>
           <FilterProvider>
             <Routes />
             <Toaster />
           </FilterProvider>
-        {/* </AuthenticationProvider> */}
+        </AuthenticationProvider>
       </BrowserRouter>
     </DashboardProvider>
   );

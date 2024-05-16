@@ -9,19 +9,27 @@ import { varFade } from "@/utils/animations/variants";
 // import useQuery from "../../../hooks/useQuery";
 
 function BarChart({ id, style }) {
-  //*--- Static Content ---*
-  const title = "World share of energy consumption, 2021";
-  const labels = [
-    { label: "Oil" },
-    { label: "Coal" },
-    { label: "Gas" },
-    { label: "Hydropower" },
-    { label: "Nuclear" },
-    { label: "Wind" },
-    { label: "Solar" },
-  ];
-  const serieData = [68954, 48212, 41032, 12755, 5000, 3050, 918];
-  //*--- end of Static Content ---*
+  const { isLoaded, error, fields, title, data, ...rest } = useQuery({ id });
+
+  if (!isLoaded) {
+    return (
+      <div className="flex flex-col gap-4">
+        <Skeleton className="w-3/4 h-3 mt-2" />
+        <div className="flex items-center justify-center" style={style}>
+          <TailSpin height="40" width="40" color="white" radius="1" />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <h1>error</h1>;
+  }
+
+  const { measures } = fields;
+
+  const labels = measures.map(({ label }) => ({ label }));
+  const serieData = Object.values(data[0]);
 
   const serie = {
     type: "bar",
@@ -35,7 +43,9 @@ function BarChart({ id, style }) {
       color: "white",
       fontFamily: "Barlow",
       fontWeight: "500",
-      formatter: (params) => params.data.label,
+      formatter: ({ data }) => {
+        return data.rendered;
+      },
     },
     itemStyle: {
       color: function (params) {

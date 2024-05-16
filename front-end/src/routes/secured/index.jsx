@@ -7,9 +7,9 @@ export default [
   {
     path: "",
     element: (
-      // <AuthenticationGuard>
+      <AuthenticationGuard>
         <Wrapper />
-      // </AuthenticationGuard>
+     </AuthenticationGuard>
     ),
     children: [
       {
