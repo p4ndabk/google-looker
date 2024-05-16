@@ -35,15 +35,15 @@ export function EnergySources() {
         <article className="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
           <motion.div variants={varFade().in} initial="initial" animate="animate">
             <ContainerWithBorderTop>
-              {/* <BarChart id="FYFR9tV16KgQlyA8AlHEpb" style={{ height: "192px" }} /> */}
-              <div style={{ height: "192px" }}>barchart</div>
+              { <BarChart id="FYFR9tV16KgQlyA8AlHEpb" style={{ height: "192px" }} /> }
+              {/* <div style={{ height: "192px" }}>barchart</div> */}
             </ContainerWithBorderTop>
           </motion.div>
 
           <motion.div variants={varFade().in} initial="initial" animate="animate">
             <ContainerWithBorderTop>
-              {/* <RadarChart id="uBwUDELKOhv9j76pr7b5Tg" style={{ height: "192px" }} /> */}
-              <div style={{ height: "192px" }}>radarchart</div>
+              { <RadarChart id="uBwUDELKOhv9j76pr7b5Tg" style={{ height: "192px" }} /> }
+              {/* <div style={{ height: "192px" }}>radarchart</div> */}
             </ContainerWithBorderTop>
           </motion.div>
         </article>
@@ -55,10 +55,10 @@ export function EnergySources() {
             </h6>
           </ContainerWithBorderTop>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
-            {/* {cards.map((card, index) => (
+            { cards.map((card, index) => (
               <Card cardInfos={card} key={`card-energy-sources${index}`} />
-            ))} */}
-            <div style={{ height: "1000px" }} />
+            )) }
+            {/* <div style={{ height: "1000px" }} /> */}
           </div>
         </article>
       </main>

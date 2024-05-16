@@ -9,8 +9,8 @@ export const Wrapper = () => {
       <BackgroundWithImages />
       <div className="flex flex-col">
         <div className="flex gap-6 flex-col mx-6 sm:mx-12">
-          {/* <Header /> */}
-          {/* <Filters /> */}
+          { <Header /> }
+          { <Filters /> }
           <div className="my-8 mx-0 sm:mx-[54px] flex-1">
             <Outlet />
           </div>
