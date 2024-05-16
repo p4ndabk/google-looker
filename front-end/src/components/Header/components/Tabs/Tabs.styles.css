@@ -1,0 +1,8 @@
+.tabs .underline {
+  border-bottom: 1px solid white;
+  bottom: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+}

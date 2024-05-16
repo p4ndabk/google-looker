@@ -1,0 +1,88 @@
+[
+  {
+    "id": "zhNHd27OpexxzxegMAzfjv",
+    "color": "#6A6158",
+    "kpi": {
+      "id": "43rb88ckqcbb6ylVhxXPSO",
+      "color": "#6A6158"
+    },
+    "kpiPercentage": {
+      "id": "75Sw64ieY5TJPVDpTqjRFK",
+      "text": "from 1990"
+    }
+  },
+  {
+    "id": "zfYNDNhXPv2wZ4UjZ3gdjG",
+    "color": "#B08C55",
+    "kpi": {
+      "id": "86Lm0Dw4ZyolBh1U8wsb8g",
+      "color": "#B08C55"
+    },
+    "kpiPercentage": {
+      "id": "CEhndFlKkVZOXX36STKeAG",
+      "text": "from 1990"
+    }
+  },
+  {},
+  {
+    "id": "1NpwXGk2DKH32DswS2oAVi ",
+    "color": "#D9B683",
+    "kpi": {
+      "id": "OiQwVRtRotk5kz0JIIwjZw",
+      "color": "#D9B683"
+    },
+    "kpiPercentage": {
+      "id": "LxG18w6nznZ1uYNiW0fewJ",
+      "text": "from 1990"
+    }
+  },
+  {
+    "id": "gfMvlBE7vmfVboh5BOeaQ6",
+    "color": "#1C233B",
+    "kpi": {
+      "id": "ueClw0BMWCfz2GHgdZmjKi",
+      "color": "#1C233B"
+    },
+    "kpiPercentage": {
+      "id": "HcX5WKNimFWHk4Y9XuFdpc",
+      "text": "from 1990"
+    }
+  },
+  {
+    "id": "B0VmLZpFKydGb8TyAh97N9",
+    "color": "#566AB6",
+    "kpi": {
+      "id": "QxzpoQ7zdvOHLaRXkqFlWM",
+      "color": "#566AB6"
+    },
+    "kpiPercentage": {
+      "id": "IB1YjEylCMrZSwo72HbUwQ",
+      "text": "from 1990"
+    }
+  },
+  {},
+  {
+    "id": "vA84wHIYdqnKLXoYlTHwJ3",
+    "color": "#6798B4",
+    "kpi": {
+      "id": "LxBot0k77ZYe08UusbFDsN",
+      "color": "#6798B4"
+    },
+    "kpiPercentage": {
+      "id": "v5XHYUQBDUwGWBxxgEjnnO",
+      "text": "from 1990"
+    }
+  },
+  {
+    "id": "DxYmVXBJZQOlKY9iAdFP3F",
+    "color": "#50B2B2",
+    "kpi": {
+      "id": "AiPrac9w8lKBCIvEHgHMM4",
+      "color": "#50B2B2"
+    },
+    "kpiPercentage": {
+      "id": "qF1Mktgk4w6nFCyuTW41Yp",
+      "text": "from 1990"
+    }
+  }
+]
